@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 
 @CucumberOptions(
         features = {"classpath:features"},
-        tags = "@twoProduct"
+        tags = "@sort"
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests {

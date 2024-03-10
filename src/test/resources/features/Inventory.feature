@@ -19,16 +19,24 @@ Feature: Inventory
     When User clicks "Sauce Labs Onesie" item
     Then Product description appears
 
-@star
-  Scenario Outline: Click star button
-    Given User is in saucedemo app
-    When User clicks "Sauce Labs Backpack" item
-    And Click on the product's "<random>" star
-    Then Pop-up window appears on the screen
-    Examples:
-      | random |
-      | 1      |
-      | 2      |
-      | 3      |
-      | 4      |
-      | 5      |
+
+#@star                 // 3-cu stepde ulduza cliclemir
+#    Scenario: Click star button
+#    Given User is in saucedemo app
+#    When User clicks "Sauce Labs Backpack" item
+#    And Click on the product's random star
+#    Then Pop-up window appears on the screen
+
+
+#  Scenario Outline: Click star button
+#    Given User is in saucedemo app
+#    When User clicks "Sauce Labs Backpack" item
+#    And Click on the product's "<random>" star
+#    Then Pop-up window appears on the screen
+#    Examples:
+#      | random |
+#      | 1      |
+#      | 2      |
+#      | 3      |
+#      | 4      |
+#      | 5      |

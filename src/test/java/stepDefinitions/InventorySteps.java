@@ -1,8 +1,11 @@
 package stepDefinitions;
 
+import com.google.common.collect.ImmutableMap;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pom.InventoryPom;
@@ -28,7 +31,7 @@ public class InventorySteps extends BaseMethods {
       //1
 
       findElementByText(itemText).click();
-
+        System.out.println(itemText);
       //2
 
 //      List<WebElement> elements =  getElements(inventoryPom.getInventoryElementText());
@@ -40,16 +43,18 @@ public class InventorySteps extends BaseMethods {
 
     }
 
+    @And("Click on the product's random star")
+    public void clickOnTheProductSRandomStar() {
 
-    @When("Click on the product's {string} star")
-    public void clickOnTheProductSStar(Integer number) throws InterruptedException {
-        Thread.sleep(3000);
+        //scrollToElementText(getElement(inventoryPom.getDescriptionText()).getText());
+        System.out.println(getElement(inventoryPom.getProductDescription()).getText());
         getElement(inventoryPom.getStarProduct()).click();
-
     }
+
 
     @Then("Pop-up window appears on the screen")
     public void popUpWindowAppearsOnTheScreen() {
+        Assert.assertTrue(getElement(inventoryPom.getStarText()).isDisplayed());
 
     }
 
@@ -59,4 +64,6 @@ public class InventorySteps extends BaseMethods {
         Assert.assertTrue(getElement(inventoryPom.getProductDescription()).isDisplayed());
 
     }
+
+
 }

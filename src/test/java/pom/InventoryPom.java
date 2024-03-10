@@ -20,7 +20,8 @@ public class InventoryPom {
     }
 
     private final By inventoryElementText = By.xpath("//*[@content-desc='store item text'");
-    private By starProduct = AppiumBy.xpath("(//android.widget.TextView[@text=\"\uDB81\uDCCF\"])[3]");
+    private final By starProduct = AppiumBy.xpath("(//android.widget.TextView[@text=\"\uDB81\uDCCF\"])[3]");
     private final By productDescription = AppiumBy.accessibilityId("product description");
     private final By descriptionText = AppiumBy.xpath("//android.widget.TextView[@content-desc=\"product description\"]");
+    private final By starText = AppiumBy.xpath("//android.widget.TextView[@text=\"Thank you for submitting your review!\"]");
 }
